@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="m9ClCqGJUUeEGM-BUCq9hQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="h8NAHrwyY0OwJHqHwUJgfw" Reference="J-51H8lC50Oq34C3KFghQA/8LQLUbXS3kSGjl9hRQzQDQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
     <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://astrologyfutureeye.com/astro-calculators/sun-sign-calculator" CVScreenId="faeefb74-c781-44e5-9255-875f5f04a58c" CvElementArea="718, 810, 162, 26" CvTextArea="779, 816, 41, 12" CvTextArgument="Submit" CvType="Button" DesignTimeRectangle="719, 812, 160, 23" DesignTimeScaleFactor="0.800000011920929" ElementType="Button" FullSelectorArgument="&lt;webctrl id='sub' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sub' tag='INPUT' type='submit' class='button' aaname='Submit' check:text='Submit' /&gt;" Guid="f0841349-a989-4d05-ada7-6626a6571a59" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sun Sign Calculator | Western Zodiac Sign Calculator' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
       <TargetAnchorable.Anchors>
@@ -7,7 +7,7 @@
           <Target CVScreenId="faeefb74-c781-44e5-9255-875f5f04a58c" CvTextArea="743, 712, 112, 13" CvTextArgument="Sun Sign Finder" CvType="Text" DesignTimeRectangle="539, 706, 520, 28" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='sc' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='sc' tag='DIV' type='' class='form-h' aaname='Sun Sign Finder' check:innerText='Sun Sign Finder' /&gt;" Guid="10fde1df-16a3-460a-9b65-635ce7fe4c6e" SearchSteps="FuzzySelector, CV" />
         </scg:List>
       </TargetAnchorable.Anchors>
-      <imageRef attrName="InformativeScreenshot" originalValue="caec27fabc442d39446f1330bdfc28d7.png" xmlns="">0IrxESuquw0WAq8J_PLcrSQ</imageRef>
+      <imageRef attrName="InformativeScreenshot" originalValue="caec27fabc442d39446f1330bdfc28d7.png" xmlns="">0a9UxSkE4gEaJXjepCkhSuQ</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">Click</x:String>
   </ObjectRepositoryTargetData.Data>
