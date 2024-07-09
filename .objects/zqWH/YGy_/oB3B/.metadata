@@ -1,0 +1,15 @@
+﻿{
+  "Name": "SunSign",
+  "Type": "Screen",
+  "Id": "oB3Bwnu5G0urPQDtdG9_-g",
+  "Reference": "J-51H8lC50Oq34C3KFghQA/oB3Bwnu5G0urPQDtdG9_-g",
+  "ParentRef": "J-51H8lC50Oq34C3KFghQA/YGy_t99ZGEGV9wUlEYDpKg",
+  "Created": "2024-07-09T12:31:49.3546828Z",
+  "Updated": "2024-07-09T12:31:59.164409Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Select Item 'MONTH'",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "dr2OZ90RnEiXxhmIYXCZ_g",
+  "Reference": "41ejD4GEm0-SDl0yw5Rkuw/dr2OZ90RnEiXxhmIYXCZ_g",
+  "ParentRef": "41ejD4GEm0-SDl0yw5Rkuw/j21cDOHfIk2JhydupqynwQ",
+  "Created": "2024-07-09T08:02:24.4297454Z",
+  "Updated": "2024-07-09T08:02:24.4297454Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

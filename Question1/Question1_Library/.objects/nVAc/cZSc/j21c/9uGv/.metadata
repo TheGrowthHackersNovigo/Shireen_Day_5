@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Get Attribute 'Zodiac Sign - Aquarius'",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "9uGvsdarIEiFQUMFVVkSmQ",
+  "Reference": "41ejD4GEm0-SDl0yw5Rkuw/9uGvsdarIEiFQUMFVVkSmQ",
+  "ParentRef": "41ejD4GEm0-SDl0yw5Rkuw/j21cDOHfIk2JhydupqynwQ",
+  "Created": "2024-07-09T08:02:31.7945146Z",
+  "Updated": "2024-07-09T08:02:31.7945146Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

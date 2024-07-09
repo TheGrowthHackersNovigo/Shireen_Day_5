@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Get year",
+  "Description": "Get year from the website",
+  "Type": "App",
+  "Id": "zqWHz9obwUCxnFZw09755g",
+  "Reference": "J-51H8lC50Oq34C3KFghQA/zqWHz9obwUCxnFZw09755g",
+  "Created": "2024-07-09T12:31:29.0188568Z",
+  "Updated": "2024-07-09T12:31:29.0188568Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

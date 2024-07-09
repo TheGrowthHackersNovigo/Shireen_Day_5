@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="dX0Kf5m0OkuB1-5l3zob6w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://astrologyfutureeye.com/zodiac/aquarius-sign?sgn" CVScreenId="1e6dc353-8cb8-4cc2-849e-9ba3023567a0" CvTextArea="877, 601, 115, 13" CvTextArgument="Zodiac Sign - Aquarius" CvType="Text" DesignTimeRectangle="780, 595, 311, 24" DesignTimeScaleFactor="0.800000011920929" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='Zodiac Sign - Aquarius' check:innerText='Zodiac Sign - Aquarius' /&gt;" Guid="477c4945-9624-4321-8738-5da26745126a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aquarius Horoscope Sign | Traits &amp;amp; Personality Predictions' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="79f626c949893636b3e6bc515c661a80.png" xmlns="">79f626c949893636b3e6bc515c661a80.png</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetAttributeGeneric</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

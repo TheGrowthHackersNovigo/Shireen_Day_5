@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Select Item 'YEAR'",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "bGmewDNVKkaz5DGeVDgDeA",
+  "Reference": "41ejD4GEm0-SDl0yw5Rkuw/bGmewDNVKkaz5DGeVDgDeA",
+  "ParentRef": "41ejD4GEm0-SDl0yw5Rkuw/j21cDOHfIk2JhydupqynwQ",
+  "Created": "2024-07-09T08:02:22.0694268Z",
+  "Updated": "2024-07-09T08:02:22.0694268Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome Sun Sign Calculator  Western Zodiac Sign Calculator",
+  "Type": "App",
+  "Id": "nVAcng25z0G35W5p2quqng",
+  "Reference": "41ejD4GEm0-SDl0yw5Rkuw/nVAcng25z0G35W5p2quqng",
+  "Created": "2024-07-09T08:02:00.3410249Z",
+  "Updated": "2024-07-09T08:02:00.3410249Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Get Attribute 'day'",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "d5jzRMTvyUy65ZZAznE3rQ",
+  "Reference": "41ejD4GEm0-SDl0yw5Rkuw/d5jzRMTvyUy65ZZAznE3rQ",
+  "ParentRef": "41ejD4GEm0-SDl0yw5Rkuw/j21cDOHfIk2JhydupqynwQ",
+  "Created": "2024-07-09T08:02:10.6043157Z",
+  "Updated": "2024-07-09T08:02:10.6043157Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

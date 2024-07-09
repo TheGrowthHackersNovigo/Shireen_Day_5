@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="uKbWPT5D20Ce0lUGMD3IGQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://astrologyfutureeye.com/astro-calculators/sun-sign-calculator" CVScreenId="c5c0ad4b-cc95-43b8-8119-de46fdc36a9c" CvElementArea="577, 573, 147, 28" CvType="InputBox" DesignTimeRectangle="578, 574, 146, 26" DesignTimeScaleFactor="0.800000011920929" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='day' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='day' tag='SELECT' type='' class='input w28' aaname='' /&gt;" Guid="27d8ffbc-7c0d-441d-8d8d-b5a0e5c0b440" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sun Sign Calculator | Western Zodiac Sign Calculator' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target DesignTimeRectangle="578, 562, 442, 12" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='sc' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='sc' tag='SPAN' type='' class='lable' aaname='Birth Details (DD/MM/YY)' check:innerText='Birth Details (DD/MM/YY)' /&gt;" Guid="674f90b7-f56d-437b-8a5e-e5b376c4afaa" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="774ac60bde6af404819f421e62ead999.png" xmlns="">774ac60bde6af404819f421e62ead999.png</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
