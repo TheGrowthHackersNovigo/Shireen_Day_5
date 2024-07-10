@@ -106,7 +106,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Indicating process started" DisplayName="Log Message :Indicating process started" sap:VirtualizedContainerService.HintSize="530,207.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process started&quot;]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Indicating process started" DisplayName="Log Message :Indicating process started" sap:VirtualizedContainerService.HintSize="530,207.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process finding sunsign started&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -398,7 +398,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MessageBox>
-            <ui:LogMessage sap2010:Annotation.AnnotationText="Indicating process completed" DisplayName="Log Message :Indicating process completed" sap:VirtualizedContainerService.HintSize="434,203.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Process completed&quot;]">
+            <ui:LogMessage sap2010:Annotation.AnnotationText="Indicating process completed" DisplayName="Log Message :Indicating process completed" sap:VirtualizedContainerService.HintSize="434,203.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Process finding sunsign completed&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

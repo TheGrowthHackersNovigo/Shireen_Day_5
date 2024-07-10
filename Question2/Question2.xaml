@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question2" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="883.3333333333334,3781.3333333333335" sap2010:WorkflowViewState.IdRef="Question2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question2" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="883.3333333333334,3900.6666666666665" sap2010:WorkflowViewState.IdRef="Question2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -109,7 +109,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Go to  https://quotes.toscrape.com/ and &#xA;• Extract all Quotes, Author Name, and tags. &#xA;• Extract this info for the landing page and for  ‘Reading’, “inspirational’, ‘Friendship’ tags from the top ten. &#xA;• Write these to respective sheets(tag name) where Quotes Author Name and Tags are the column names.&#xA;" DisplayName="Question2" sap:VirtualizedContainerService.HintSize="784,3716.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Go to  https://quotes.toscrape.com/ and &#xA;• Extract all Quotes, Author Name, and tags. &#xA;• Extract this info for the landing page and for  ‘Reading’, “inspirational’, ‘Friendship’ tags from the top ten. &#xA;• Write these to respective sheets(tag name) where Quotes Author Name and Tags are the column names.&#xA;" DisplayName="Question2" sap:VirtualizedContainerService.HintSize="784,3836" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="AllPages" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_LandingPage" />
@@ -120,11 +120,11 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Indicating process started" DisplayName="Log Message :Indicating process started" sap:VirtualizedContainerService.HintSize="722,88" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process started&quot;]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Indicating process started" DisplayName="Log Message :Indicating process started" sap:VirtualizedContainerService.HintSize="722,207.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process quotes to scrape started&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -334,7 +334,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Indicating process completed" DisplayName="Log Message :Indicating process completed" sap:VirtualizedContainerService.HintSize="722,198" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Process completed&quot;]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Indicating process completed" DisplayName="Log Message :Indicating process completed" sap:VirtualizedContainerService.HintSize="722,198" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Process quotes to scrape completed&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
