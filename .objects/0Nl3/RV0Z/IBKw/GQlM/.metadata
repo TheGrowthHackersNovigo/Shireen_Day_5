@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Month",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "GQlMl8-6V06IyUGGcypMxA",
+  "Reference": "J-51H8lC50Oq34C3KFghQA/GQlMl8-6V06IyUGGcypMxA",
+  "ParentRef": "J-51H8lC50Oq34C3KFghQA/IBKwujMkcUaqRAHj_KfERQ",
+  "Created": "2024-07-10T17:36:40.0423585Z",
+  "Updated": "2024-07-10T17:37:56.0278762Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

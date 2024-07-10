@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question2" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="774,3781.3333333333335" sap2010:WorkflowViewState.IdRef="Question2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question2" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="883.3333333333334,3781.3333333333335" sap2010:WorkflowViewState.IdRef="Question2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -129,7 +129,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Opening the  Quotes to Scrape landing page " AttachMode="ByInstance" DisplayName="Use Browser Chrome: Quotes to Scrape landing page " sap:VirtualizedContainerService.HintSize="722,1300.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="38be7931-5c81-40e5-902a-4385f90900ed" Version="V2">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Opening the  Quotes to Scrape landing page " AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Quotes to Scrape landing page " sap:VirtualizedContainerService.HintSize="722,1300.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="38be7931-5c81-40e5-902a-4385f90900ed" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -235,7 +235,7 @@
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard sap2010:Annotation.AnnotationText="Opening the browser again" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Quotes to Scrape other pages " sap:VirtualizedContainerService.HintSize="626,1501.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="850b0539-d863-4e35-8301-12a5fc280fdc" Version="V2">
+            <uix:NApplicationCard sap2010:Annotation.AnnotationText="Opening the browser again" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Quotes to Scrape other pages " sap:VirtualizedContainerService.HintSize="626,1501.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="850b0539-d863-4e35-8301-12a5fc280fdc" Version="V2" WindowResize="Maximize">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>

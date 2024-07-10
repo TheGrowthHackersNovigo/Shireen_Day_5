@@ -1,0 +1,11 @@
+﻿{
+  "Name": "Sun sign",
+  "Type": "App",
+  "Id": "0Nl3_G2uMk2aJAmEcy2xgQ",
+  "Reference": "J-51H8lC50Oq34C3KFghQA/0Nl3_G2uMk2aJAmEcy2xgQ",
+  "Created": "2024-07-10T17:22:39.021007Z",
+  "Updated": "2024-07-10T17:22:39.021007Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

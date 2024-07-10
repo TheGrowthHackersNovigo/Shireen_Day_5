@@ -1,0 +1,15 @@
+﻿{
+  "Name": "SunSignBrowser",
+  "Type": "Screen",
+  "Id": "IBKwujMkcUaqRAHj_KfERQ",
+  "Reference": "J-51H8lC50Oq34C3KFghQA/IBKwujMkcUaqRAHj_KfERQ",
+  "ParentRef": "J-51H8lC50Oq34C3KFghQA/RV0ZtLBAk0GX5rUfY7HYSw",
+  "Created": "2024-07-10T17:23:10.9831548Z",
+  "Updated": "2024-07-10T17:23:44.1095852Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

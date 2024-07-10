@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="aqCtkq7I70WSu2MjiEOs_A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://astrologyfutureeye.com/astro-calculators/sun-sign-calculator" CVScreenId="f5b5bf85-7785-4f68-bed4-e29f0dfdd0ee" CvElementArea="847, 711, 223, 41" CvType="InputBox" DesignTimeRectangle="849, 712, 219, 38" DesignTimeScaleFactor="1.2000000476837158" ElementType="DropDown" FullSelectorArgument="&lt;webctrl parentid='sc' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl id='month' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='month' tag='SELECT' type='' class='input w28' aaname='' /&gt;" Guid="738f286b-f887-4db1-bdcf-397f27a1b971" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sun Sign Calculator | Western Zodiac Sign Calculator' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6e387d7c858fedeaa22722d1d6f58533.png" xmlns="">080dWICcwGkCTTnBhD6xYJw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
