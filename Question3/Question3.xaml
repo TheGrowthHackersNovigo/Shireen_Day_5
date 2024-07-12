@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Question3" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="883.3333333333334,6456" sap2010:WorkflowViewState.IdRef="Question3_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Question3" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="887,2101" sap2010:WorkflowViewState.IdRef="Question3_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -107,9 +107,14 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="RPA Challenge:&#xA;• Go to the URL http://rpachallenge.com&#xA;• Download the input data file by clicking on the “Download Excel” button.&#xA;• Click on the start button&#xA;• Enter the details in the webpage.&#xA;Display the success rate (along with the time taken to complete) in a message box.&#xA;" DisplayName="Question3" sap:VirtualizedContainerService.HintSize="800,6391.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="RPA Challenge:&#xA;• Go to the URL http://rpachallenge.com&#xA;• Download the input data file by clicking on the “Download Excel” button.&#xA;• Click on the start button&#xA;• Enter the details in the webpage.&#xA;Display the success rate (along with the time taken to complete) in a message box.&#xA;" DisplayName="Question3" sap:VirtualizedContainerService.HintSize="896,7435" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Details" />
+      <Variable x:TypeArguments="x:String" Name="InputFile">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">C:\Users\Shireen.M\Documents\UiPath\Shireen_Day_5_1\Data\Input\challenge.xlsx</Literal>
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -117,7 +122,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Indicating process started" DisplayName="Log Message :Indicating process started" sap:VirtualizedContainerService.HintSize="738,207.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Process RPA challenge started&quot;]">
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Indicating process started" DisplayName="Log Message :Indicating process started" sap:VirtualizedContainerService.HintSize="834,204" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Process RPA challenge started&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -126,222 +131,125 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Using excel scope for reading input file for the challenge" DisplayName="Excel Process Scope : To read input file" sap:VirtualizedContainerService.HintSize="738,5769.333333333333" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
-      <ueab:ExcelProcessScopeX.Body>
-        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Rpa Challenge" sap:VirtualizedContainerService.HintSize="834,6831" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" ScopeGuid="f9916374-3d2c-40f8-9f49-4478a296ee77" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap2010:Annotation.AnnotationText="Reading the data from the input file and start entering the value in the game" DisplayName="Do : Perform operations" sap:VirtualizedContainerService.HintSize="704,5619.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="800,6542" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="variable1" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" sap2010:Annotation.AnnotationText="Reading input file given in the game" DisplayName="Use Excel File : Read input file" sap:VirtualizedContainerService.HintSize="642,5500.666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" UseTemplate="True" WorkbookPath="Data\Input\challenge.xlsx">
-              <ueab:ExcelApplicationCard.Body>
-                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Download Excel'" sap:VirtualizedContainerService.HintSize="738,225" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f9916374-3d2c-40f8-9f49-4478a296ee77" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="059efcf6-5211-4247-aa39-2fd98136c1e4" CvElementArea="16, 743, 378, 39" CvTextArea="118, 754, 141, 14" CvTextArgument="DOWNLOAD EXCEL" CvType="Button" DesignTimeRectangle="19, 744, 374, 36" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' Download Excel cloud_download' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Download Excel cloud_download' tag='A' type='' class=' col s12 m12 l12 btn waves-effect waves-light uiColorPrimary center' check:innerText='DOWNLOAD EXCEL&amp;#xD;&amp;#xA;cloud_download' /&gt;" Guid="dd57a1e7-f1da-472c-a8c0-34e19680c3cf" InformativeScreenshot="f9197889d6300b45d8b87e6aaca73e3b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'File name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="738,286" sap2010:WorkflowViewState.IdRef="NTypeInto_23" InteractionMode="HardwareEvents" ScopeIdentifier="f9916374-3d2c-40f8-9f49-4478a296ee77" Text="[InputFile]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="c8b9b57c-6cdc-4e92-b9bc-d475e4480b80" CvElementArea="136, 365, 651, 23" CvType="InputBox" DesignTimeRectangle="136, 369, 631, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' /&gt;&lt;ctrl name='Details Pane' role='pane' /&gt;&lt;ctrl name='File name:' role='text' /&gt;&lt;nav up='4' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="14d5a941-737b-4933-bdb4-aded65192a3b" InformativeScreenshot="4f1c72c45bd43d5d16335471d768fc72.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="c8b9b57c-6cdc-4e92-b9bc-d475e4480b80" CvTextArea="73, 371, 55, 12" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="18, 366, 115, 23" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' /&gt;&lt;ctrl name='Details Pane' role='pane' /&gt;&lt;ctrl name='File name:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' /&gt;&lt;ctrl name='Details Pane' role='pane' /&gt;&lt;ctrl name='File name:' role='text' automationid='' check:text='File name:' /&gt;" Guid="dff6ffa6-248c-409d-86bc-cb726e18b385" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DisplayName="Click 'save'" sap:VirtualizedContainerService.HintSize="738,225" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f9916374-3d2c-40f8-9f49-4478a296ee77" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="10a846f2-5444-4f45-86b1-df8a10b146b2" CvElementArea="588, 434, 88, 25" CvTextArea="618, 440, 26, 12" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="587, 434, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='unchecked' /&gt;" Guid="d641f247-9b23-4df0-b23a-58a6b6add102" InformativeScreenshot="068b543bc9d26689261cbfafd0bb8302.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Using excel scope for reading input file for the challenge" DisplayName="Excel Process Scope : To read input file" sap:VirtualizedContainerService.HintSize="738,5716" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
                   <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                   </ActivityAction.Argument>
-                  <Sequence sap2010:Annotation.AnnotationText="Reading the input range" DisplayName="Do :Read range" sap:VirtualizedContainerService.HintSize="608,5144" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence sap2010:Annotation.AnnotationText="Reading the data from the input file and start entering the value in the game" DisplayName="Do : Perform operations" sap:VirtualizedContainerService.HintSize="704,5533" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:ReadRangeX sap2010:Annotation.AnnotationText="Reading the sheet1" DisplayName="Read Range : Sheet1" sap:VirtualizedContainerService.HintSize="546,237.33333333333334" sap2010:WorkflowViewState.IdRef="ReadRangeX_4" Range="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;A1:G11&quot;)]" SaveTo="[dt_Details]">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ueab:ReadRangeX>
-                    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Opening the RPA challenge website to start the game" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application/Browser : To open RPA Challenge website" sap:VirtualizedContainerService.HintSize="546,4788" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="8271e8db-7811-4f11-9d69-225dac6e513c" Version="V2" WindowResize="Maximize">
-                      <uix:NApplicationCard.Body>
-                        <ActivityAction x:TypeArguments="x:Object">
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" sap2010:Annotation.AnnotationText="Reading input file given in the game" DisplayName="Use Excel File : Read input file" sap:VirtualizedContainerService.HintSize="642,5414" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" UseTemplate="True" WorkbookPath="[InputFile]">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                           <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                           </ActivityAction.Argument>
-                          <Sequence sap2010:Annotation.AnnotationText="Starting the game" DisplayName="Do : perform the operations after opening browser" sap:VirtualizedContainerService.HintSize="512,4515.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <Sequence sap2010:Annotation.AnnotationText="Reading the input range" DisplayName="Do :Read range" sap:VirtualizedContainerService.HintSize="608,5068" sap2010:WorkflowViewState.IdRef="Sequence_10">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Pressing start" ClickType="Single" DisplayName="Click 'Start'" sap:VirtualizedContainerService.HintSize="450,260" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Version="V3">
-                              <uix:NClick.Target>
-                                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="056a3c82-0999-4f61-96f3-5b4a1013b36e" CvElementArea="15, 817, 380, 51" CvTextArea="181, 838, 49, 14" CvTextArgument="START" CvType="Button" DesignTimeRectangle="19, 819, 374, 54" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='waves-effect col s12 m12 l12 btn-large uiColorButton' aaname='Start' check:innerText='START' /&gt;" Guid="c4ca76ca-b41f-4ca6-8eae-58697564cb75" InformativeScreenshot="7d96ff9cbe9ec86c6128aaae1002b00e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
-                                  <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                      <uix:Target CVScreenId="056a3c82-0999-4f61-96f3-5b4a1013b36e" CvElementArea="16, 773, 377, 39" CvType="Button" DesignTimeRectangle="19, 774, 374, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' Download Excel cloud_download' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Download Excel cloud_download' tag='A' type='' class=' col s12 m12 l12 btn waves-effect waves-light uiColorPrimary center' check:innerText='DOWNLOAD EXCEL&amp;#xD;&amp;#xA;cloud_download' /&gt;" Guid="48dd518d-362e-4bbb-9dc2-045a0387b65e" SearchSteps="Selector, CV" />
-                                    </scg:List>
-                                  </uix:TargetAnchorable.Anchors>
-                                </uix:TargetAnchorable>
-                              </uix:NClick.Target>
-                              <uix:NClick.VerifyOptions>
-                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                  <uix:VerifyExecutionOptions.Retry>
-                                    <InArgument x:TypeArguments="x:Boolean" />
-                                  </uix:VerifyExecutionOptions.Retry>
-                                  <uix:VerifyExecutionOptions.Timeout>
-                                    <InArgument x:TypeArguments="x:Double" />
-                                  </uix:VerifyExecutionOptions.Timeout>
-                                </uix:VerifyExecutionOptions>
-                              </uix:NClick.VerifyOptions>
+                            <ueab:ReadRangeX sap2010:Annotation.AnnotationText="Reading the sheet1" DisplayName="Read Range : Sheet1" sap:VirtualizedContainerService.HintSize="546,232" sap2010:WorkflowViewState.IdRef="ReadRangeX_4" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveTo="[dt_Details]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                            </uix:NClick>
-                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterating the data to type in the game" DataTable="[dt_Details]" DisplayName="For Each Row in Data Table : Iterating the data" sap:VirtualizedContainerService.HintSize="450,2597.3333333333335" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
-                              <ui:ForEachRow.Body>
-                                <ActivityAction x:TypeArguments="sd:DataRow">
+                            </ueab:ReadRangeX>
+                            <uix:NApplicationCard sap2010:Annotation.AnnotationText="Opening the RPA challenge website to start the game" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application/Browser : To open RPA Challenge website" sap:VirtualizedContainerService.HintSize="546,4717" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="8271e8db-7811-4f11-9d69-225dac6e513c" Version="V2" WindowResize="Maximize">
+                              <uix:NApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
-                                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                   </ActivityAction.Argument>
-                                  <Sequence sap2010:Annotation.AnnotationText="Fetching from excel and put it in type into fields" DisplayName="Body : fetch from excel and put it in type into fields" sap:VirtualizedContainerService.HintSize="416,2366.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                  <Sequence sap2010:Annotation.AnnotationText="Starting the game" DisplayName="Do : perform the operations after opening browser" sap:VirtualizedContainerService.HintSize="512,4446" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Entering the first name" ClickBeforeMode="Single" DisplayName="Type Into 'First Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,285.3333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_22" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Text="[CurrentRow(&quot;First Name&quot;).ToString()]" Version="V3">
-                                      <uix:NTypeInto.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="cc6e096d-9f4c-4a94-b8e6-439e87bbfdc6" CvElementArea="510, 244, 328, 34" CvType="InputBox" DesignTimeRectangle="515, 231, 318, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='First Name' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' /&gt;" Guid="d802f9f2-f05e-43c5-9592-5d88647a2499" InformativeScreenshot="85e9883634876cc992256975c19eab82.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
-                                          <uix:TargetAnchorable.Anchors>
-                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                              <uix:Target CVScreenId="cc6e096d-9f4c-4a94-b8e6-439e87bbfdc6" CvTextArea="514, 213, 65, 12" CvTextArgument="First Name" CvType="Text" DesignTimeRectangle="515, 211, 64, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='First Name' check:innerText='First Name' /&gt;" Guid="8fd07559-c848-4bde-8dc8-89d4578de51d" SearchSteps="FuzzySelector, CV" />
-                                            </scg:List>
-                                          </uix:TargetAnchorable.Anchors>
-                                        </uix:TargetAnchorable>
-                                      </uix:NTypeInto.Target>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </uix:NTypeInto>
-                                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Entering the last name" ClickBeforeMode="Single" DisplayName="Type Into 'Last Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,285.3333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Text="[CurrentRow(&quot;Last Name&quot;).ToString]" Version="V3">
-                                      <uix:NTypeInto.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="0d0a640e-9db1-46f6-abbc-b2c89ea566cf" CvElementArea="508, 556, 328, 39" CvType="InputBox" DesignTimeRectangle="515, 548, 318, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='Last Name' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='rQbtB' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' /&gt;" Guid="1ce6eb4a-1f6b-4ab1-a404-fe1a29c87193" InformativeScreenshot="4c5f2523d754f17b4f74c277e50e9cdd.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
-                                          <uix:TargetAnchorable.Anchors>
-                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                              <uix:Target CVScreenId="0d0a640e-9db1-46f6-abbc-b2c89ea566cf" CvTextArea="514, 532, 65, 11" CvTextArgument="Last Name" CvType="Text" DesignTimeRectangle="515, 529, 63, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Last Name' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Last Name' tag='LABEL' type='' class='' check:innerText='Last Name' /&gt;" Guid="fe3f936f-9fa1-4778-90b4-64c40c3e3303" SearchSteps="FuzzySelector, CV" />
-                                            </scg:List>
-                                          </uix:TargetAnchorable.Anchors>
-                                        </uix:TargetAnchorable>
-                                      </uix:NTypeInto.Target>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </uix:NTypeInto>
-                                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Entering the company name" ClickBeforeMode="Single" DisplayName="Type Into 'Company Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,285.3333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_17" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Text="[CurrentRow(&quot;Company Name&quot;).ToString]" Version="V3">
-                                      <uix:NTypeInto.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="87bb94da-9964-46c5-8af9-882a4ca8a187" CvElementArea="510, 438, 327, 33" CvType="InputBox" DesignTimeRectangle="515, 424, 318, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='Company Name' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='TtPcT' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' /&gt;" Guid="a023cd37-9ef5-4c5a-b504-056f38d76506" InformativeScreenshot="3bfb524927faac550cb6e587b2be013a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
-                                          <uix:TargetAnchorable.Anchors>
-                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                              <uix:Target CVScreenId="87bb94da-9964-46c5-8af9-882a4ca8a187" CvTextArea="514, 408, 101, 14" CvTextArgument="Company Name" CvType="Text" DesignTimeRectangle="515, 405, 100, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Company Name' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Company Name' tag='LABEL' type='' class='' check:innerText='Company Name' /&gt;" Guid="299b6d18-87a1-4d25-addc-0c1c28cea372" SearchSteps="FuzzySelector, CV" />
-                                            </scg:List>
-                                          </uix:TargetAnchorable.Anchors>
-                                        </uix:TargetAnchorable>
-                                      </uix:NTypeInto.Target>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </uix:NTypeInto>
-                                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Entering the role in company" ClickBeforeMode="Single" DisplayName="Type Into 'Role in Company'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,285.3333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_18" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Text="[CurrentRow(&quot;Role in Company&quot;).toString]" Version="V3">
-                                      <uix:NTypeInto.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="70ff06d7-34bd-4d64-ada6-ed511a5727d1" CvElementArea="509, 610, 328, 38" CvType="InputBox" DesignTimeRectangle="515, 601, 318, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='Role in Company' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='phIiK' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' /&gt;" Guid="54b4d7f9-1759-4da2-8ffe-2f689535eefe" InformativeScreenshot="bdea8e29e6dc850f15f8410fb3449170.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
-                                          <uix:TargetAnchorable.Anchors>
-                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                              <uix:Target CVScreenId="70ff06d7-34bd-4d64-ada6-ed511a5727d1" CvTextArea="514, 584, 104, 15" CvTextArgument="Role in Company" CvType="Text" DesignTimeRectangle="515, 582, 102, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Role in Company' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Role in Company' tag='LABEL' type='' class='' check:innerText='Role in Company' /&gt;" Guid="eb1df859-c950-4092-b847-605bb77f9fdf" SearchSteps="FuzzySelector, CV" />
-                                            </scg:List>
-                                          </uix:TargetAnchorable.Anchors>
-                                        </uix:TargetAnchorable>
-                                      </uix:NTypeInto.Target>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </uix:NTypeInto>
-                                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Entering the address" ClickBeforeMode="Single" DisplayName="Type Into 'Address'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,285.3333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_19" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Text="[CurrentRow(&quot;Address&quot;).toString]" Version="V3">
-                                      <uix:NTypeInto.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="70ff06d7-34bd-4d64-ada6-ed511a5727d1" CvElementArea="850, 434, 327, 37" CvType="InputBox" DesignTimeRectangle="855, 424, 318, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='Address' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='23Fwk' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' /&gt;" Guid="413f0600-1919-4fc1-9961-ea5fa0032be0" InformativeScreenshot="de37e707e4e56cfb75cb46f92ec79854.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
-                                          <uix:TargetAnchorable.Anchors>
-                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                              <uix:Target CVScreenId="70ff06d7-34bd-4d64-ada6-ed511a5727d1" CvTextArea="854, 407, 50, 12" CvTextArgument="Address" CvType="Text" DesignTimeRectangle="855, 405, 49, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Address' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Address' tag='LABEL' type='' class='' check:innerText='Address' /&gt;" Guid="ecde9a51-37f7-4a99-9b28-a5c901de8b8f" SearchSteps="FuzzySelector, CV" />
-                                            </scg:List>
-                                          </uix:TargetAnchorable.Anchors>
-                                        </uix:TargetAnchorable>
-                                      </uix:NTypeInto.Target>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </uix:NTypeInto>
-                                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Entering the email" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,285.3333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_20" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Text="[CurrentRow(&quot;Email&quot;).ToString]" Version="V3">
-                                      <uix:NTypeInto.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="49e945ed-661a-4a7d-81c6-62dbe13ff78f" CvElementArea="508, 555, 328, 40" CvType="InputBox" DesignTimeRectangle="515, 548, 318, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='Email' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='x5TiR' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' /&gt;" Guid="3a29ef90-336b-4278-9bec-e8225da4b609" InformativeScreenshot="a35e2fb817b7874b6251243f6050241d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
-                                          <uix:TargetAnchorable.Anchors>
-                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                              <uix:Target CVScreenId="49e945ed-661a-4a7d-81c6-62dbe13ff78f" CvTextArea="514, 531, 34, 12" CvTextArgument="Email" CvType="Text" DesignTimeRectangle="515, 529, 33, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Email' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Email' tag='LABEL' type='' class='' check:innerText='Email' /&gt;" Guid="c0ead469-9355-4f74-95a6-af8e32784f32" SearchSteps="FuzzySelector, CV" />
-                                            </scg:List>
-                                          </uix:TargetAnchorable.Anchors>
-                                        </uix:TargetAnchorable>
-                                      </uix:NTypeInto.Target>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </uix:NTypeInto>
-                                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Entering the phone number" ClickBeforeMode="Single" DisplayName="Type Into 'Phone Number'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,285.3333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_21" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Text="[CurrentRow(&quot;Phone Number&quot;).ToString]" Version="V3">
-                                      <uix:NTypeInto.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="701a7a97-cef9-4d3c-b02c-3b2ebca31b43" CvElementArea="509, 383, 328, 34" CvType="InputBox" DesignTimeRectangle="515, 371, 318, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='Phone Number' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZOIDJ' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' /&gt;" Guid="d752cd9a-1681-4efd-a73b-740903c61b80" InformativeScreenshot="08276f5a161b2c7e06b9d968c84c5709.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
-                                          <uix:TargetAnchorable.Anchors>
-                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                              <uix:Target CVScreenId="701a7a97-cef9-4d3c-b02c-3b2ebca31b43" CvTextArea="514, 354, 91, 12" CvTextArgument="Phone Number" CvType="Text" DesignTimeRectangle="515, 352, 89, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Phone Number' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Phone Number' tag='LABEL' type='' class='' check:innerText='Phone Number' /&gt;" Guid="e2a5ee3b-1097-47be-bd50-dd22e7b6bd31" SearchSteps="FuzzySelector, CV" />
-                                            </scg:List>
-                                          </uix:TargetAnchorable.Anchors>
-                                        </uix:TargetAnchorable>
-                                      </uix:NTypeInto.Target>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </uix:NTypeInto>
-                                    <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Pressing submit button to go to next round" ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="354,250.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Version="V3">
+                                    <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Pressing start" ClickType="Single" DisplayName="Click 'Start'" sap:VirtualizedContainerService.HintSize="450,256" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Version="V3">
                                       <uix:NClick.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="dc35190a-b2bc-4caf-b2d7-35ee115371b6" CvElementArea="502, 612, 120, 41" CvTextArea="532, 624, 58, 14" CvTextArgument="SUBMIT" CvType="Button" DesignTimeRectangle="504, 614, 116, 36" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='btn uiColorButton' aaname='Submit' check:text='Submit' /&gt;" Guid="999c72e6-7bb8-4d76-ae50-3f9405c83f8c" InformativeScreenshot="b5afe376d03cee93c7c1536c7be26cde.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                        <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="056a3c82-0999-4f61-96f3-5b4a1013b36e" CvElementArea="15, 817, 380, 51" CvTextArea="181, 838, 49, 14" CvTextArgument="START" CvType="Button" DesignTimeRectangle="19, 819, 374, 54" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='waves-effect col s12 m12 l12 btn-large uiColorButton' aaname='Start' check:innerText='START' /&gt;" Guid="c4ca76ca-b41f-4ca6-8eae-58697564cb75" InformativeScreenshot="7d96ff9cbe9ec86c6128aaae1002b00e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                           <uix:TargetAnchorable.Anchors>
                                             <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                              <uix:Target CVScreenId="dc35190a-b2bc-4caf-b2d7-35ee115371b6" CvTextArea="28, 225, 142, 24" CvTextArgument="Instructions" CvType="Text" DesignTimeRectangle="19, 210, 280, 56" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' Instructions ' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Instructions ' tag='DIV' type='' class='col s12 m12 l9 ' check:innerText='Instructions' /&gt;" Guid="034b64bc-c841-4052-a7b6-cd2a34595dd1" SearchSteps="Selector" />
+                                              <uix:Target CVScreenId="056a3c82-0999-4f61-96f3-5b4a1013b36e" CvElementArea="16, 773, 377, 39" CvType="Button" DesignTimeRectangle="19, 774, 374, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' Download Excel cloud_download' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Download Excel cloud_download' tag='A' type='' class=' col s12 m12 l12 btn waves-effect waves-light uiColorPrimary center' check:innerText='DOWNLOAD EXCEL&amp;#xD;&amp;#xA;cloud_download' /&gt;" Guid="48dd518d-362e-4bbb-9dc2-045a0387b65e" SearchSteps="Selector, CV" />
                                             </scg:List>
                                           </uix:TargetAnchorable.Anchors>
                                         </uix:TargetAnchorable>
@@ -358,92 +266,269 @@
                                       </uix:NClick.VerifyOptions>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NClick>
+                                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterating the data to type in the game" DataTable="[dt_Details]" DisplayName="For Each Row in Data Table : Iterating the data" sap:VirtualizedContainerService.HintSize="450,2560" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                                      <ui:ForEachRow.Body>
+                                        <ActivityAction x:TypeArguments="sd:DataRow">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                          </ActivityAction.Argument>
+                                          <Sequence sap2010:Annotation.AnnotationText="Fetching from excel and put it in type into fields" DisplayName="Body : fetch from excel and put it in type into fields" sap:VirtualizedContainerService.HintSize="416,2333" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Entering the first name" ClickBeforeMode="Single" DisplayName="Type Into 'First Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,281" sap2010:WorkflowViewState.IdRef="NTypeInto_22" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Text="[CurrentRow(&quot;First Name&quot;).ToString()]" Version="V3">
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="cc6e096d-9f4c-4a94-b8e6-439e87bbfdc6" CvElementArea="510, 244, 328, 34" CvType="InputBox" DesignTimeRectangle="515, 231, 318, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='First Name' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' /&gt;" Guid="d802f9f2-f05e-43c5-9592-5d88647a2499" InformativeScreenshot="85e9883634876cc992256975c19eab82.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="cc6e096d-9f4c-4a94-b8e6-439e87bbfdc6" CvTextArea="514, 213, 65, 12" CvTextArgument="First Name" CvType="Text" DesignTimeRectangle="515, 211, 64, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='First Name' check:innerText='First Name' /&gt;" Guid="8fd07559-c848-4bde-8dc8-89d4578de51d" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NTypeInto>
+                                            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Entering the last name" ClickBeforeMode="Single" ContinueOnError="False" DisplayName="Type Into 'Last Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,281" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Text="[CurrentRow(&quot;Last Name &quot;).ToString]" Version="V3">
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="0d0a640e-9db1-46f6-abbc-b2c89ea566cf" CvElementArea="508, 556, 328, 39" CvType="InputBox" DesignTimeRectangle="515, 548, 318, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='Last Name' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='rQbtB' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' /&gt;" Guid="1ce6eb4a-1f6b-4ab1-a404-fe1a29c87193" InformativeScreenshot="4c5f2523d754f17b4f74c277e50e9cdd.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="0d0a640e-9db1-46f6-abbc-b2c89ea566cf" CvTextArea="514, 532, 65, 11" CvTextArgument="Last Name" CvType="Text" DesignTimeRectangle="515, 529, 63, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Last Name' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Last Name' tag='LABEL' type='' class='' check:innerText='Last Name' /&gt;" Guid="fe3f936f-9fa1-4778-90b4-64c40c3e3303" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NTypeInto>
+                                            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Entering the company name" ClickBeforeMode="Single" DisplayName="Type Into 'Company Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,281" sap2010:WorkflowViewState.IdRef="NTypeInto_17" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Text="[CurrentRow(&quot;Company Name&quot;).ToString]" Version="V3">
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="87bb94da-9964-46c5-8af9-882a4ca8a187" CvElementArea="510, 438, 327, 33" CvType="InputBox" DesignTimeRectangle="515, 424, 318, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='Company Name' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='TtPcT' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' /&gt;" Guid="a023cd37-9ef5-4c5a-b504-056f38d76506" InformativeScreenshot="3bfb524927faac550cb6e587b2be013a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="87bb94da-9964-46c5-8af9-882a4ca8a187" CvTextArea="514, 408, 101, 14" CvTextArgument="Company Name" CvType="Text" DesignTimeRectangle="515, 405, 100, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Company Name' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Company Name' tag='LABEL' type='' class='' check:innerText='Company Name' /&gt;" Guid="299b6d18-87a1-4d25-addc-0c1c28cea372" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NTypeInto>
+                                            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Entering the role in company" ClickBeforeMode="Single" DisplayName="Type Into 'Role in Company'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,281" sap2010:WorkflowViewState.IdRef="NTypeInto_18" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Text="[CurrentRow(&quot;Role in Company&quot;).toString]" Version="V3">
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="70ff06d7-34bd-4d64-ada6-ed511a5727d1" CvElementArea="509, 610, 328, 38" CvType="InputBox" DesignTimeRectangle="515, 601, 318, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='Role in Company' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='phIiK' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' /&gt;" Guid="54b4d7f9-1759-4da2-8ffe-2f689535eefe" InformativeScreenshot="bdea8e29e6dc850f15f8410fb3449170.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="70ff06d7-34bd-4d64-ada6-ed511a5727d1" CvTextArea="514, 584, 104, 15" CvTextArgument="Role in Company" CvType="Text" DesignTimeRectangle="515, 582, 102, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Role in Company' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Role in Company' tag='LABEL' type='' class='' check:innerText='Role in Company' /&gt;" Guid="eb1df859-c950-4092-b847-605bb77f9fdf" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NTypeInto>
+                                            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Entering the address" ClickBeforeMode="Single" DisplayName="Type Into 'Address'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,281" sap2010:WorkflowViewState.IdRef="NTypeInto_19" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Text="[CurrentRow(&quot;Address&quot;).toString]" Version="V3">
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="70ff06d7-34bd-4d64-ada6-ed511a5727d1" CvElementArea="850, 434, 327, 37" CvType="InputBox" DesignTimeRectangle="855, 424, 318, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='Address' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='23Fwk' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' /&gt;" Guid="413f0600-1919-4fc1-9961-ea5fa0032be0" InformativeScreenshot="de37e707e4e56cfb75cb46f92ec79854.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="70ff06d7-34bd-4d64-ada6-ed511a5727d1" CvTextArea="854, 407, 50, 12" CvTextArgument="Address" CvType="Text" DesignTimeRectangle="855, 405, 49, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Address' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Address' tag='LABEL' type='' class='' check:innerText='Address' /&gt;" Guid="ecde9a51-37f7-4a99-9b28-a5c901de8b8f" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NTypeInto>
+                                            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Entering the email" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,281" sap2010:WorkflowViewState.IdRef="NTypeInto_20" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Text="[CurrentRow(&quot;Email&quot;).ToString]" Version="V3">
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="49e945ed-661a-4a7d-81c6-62dbe13ff78f" CvElementArea="508, 555, 328, 40" CvType="InputBox" DesignTimeRectangle="515, 548, 318, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='Email' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='x5TiR' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' /&gt;" Guid="3a29ef90-336b-4278-9bec-e8225da4b609" InformativeScreenshot="a35e2fb817b7874b6251243f6050241d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="49e945ed-661a-4a7d-81c6-62dbe13ff78f" CvTextArea="514, 531, 34, 12" CvTextArgument="Email" CvType="Text" DesignTimeRectangle="515, 529, 33, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Email' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Email' tag='LABEL' type='' class='' check:innerText='Email' /&gt;" Guid="c0ead469-9355-4f74-95a6-af8e32784f32" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NTypeInto>
+                                            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Entering the phone number" ClickBeforeMode="Single" DisplayName="Type Into 'Phone Number'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,281" sap2010:WorkflowViewState.IdRef="NTypeInto_21" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Text="[CurrentRow(&quot;Phone Number&quot;).ToString]" Version="V3">
+                                              <uix:NTypeInto.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="701a7a97-cef9-4d3c-b02c-3b2ebca31b43" CvElementArea="509, 383, 328, 34" CvType="InputBox" DesignTimeRectangle="515, 371, 318, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='Phone Number' tag='LABEL' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ZOIDJ' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' /&gt;" Guid="d752cd9a-1681-4efd-a73b-740903c61b80" InformativeScreenshot="08276f5a161b2c7e06b9d968c84c5709.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="701a7a97-cef9-4d3c-b02c-3b2ebca31b43" CvTextArea="514, 354, 91, 12" CvTextArgument="Phone Number" CvType="Text" DesignTimeRectangle="515, 352, 89, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Phone Number' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Phone Number' tag='LABEL' type='' class='' check:innerText='Phone Number' /&gt;" Guid="e2a5ee3b-1097-47be-bd50-dd22e7b6bd31" SearchSteps="FuzzySelector, CV" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NTypeInto.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NTypeInto>
+                                            <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Pressing submit button to go to next round" ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="354,247" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8271e8db-7811-4f11-9d69-225dac6e513c" Version="V3">
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="dc35190a-b2bc-4caf-b2d7-35ee115371b6" CvElementArea="502, 612, 120, 41" CvTextArea="532, 624, 58, 14" CvTextArgument="SUBMIT" CvType="Button" DesignTimeRectangle="504, 614, 116, 36" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='btn uiColorButton' aaname='Submit' check:text='Submit' /&gt;" Guid="999c72e6-7bb8-4d76-ae50-3f9405c83f8c" InformativeScreenshot="b5afe376d03cee93c7c1536c7be26cde.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="dc35190a-b2bc-4caf-b2d7-35ee115371b6" CvTextArea="28, 225, 142, 24" CvTextArgument="Instructions" CvType="Text" DesignTimeRectangle="19, 210, 280, 56" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' Instructions ' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Instructions ' tag='DIV' type='' class='col s12 m12 l9 ' check:innerText='Instructions' /&gt;" Guid="034b64bc-c841-4052-a7b6-cd2a34595dd1" SearchSteps="Selector" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NClick.Target>
+                                              <uix:NClick.VerifyOptions>
+                                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                  <uix:VerifyExecutionOptions.Retry>
+                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                  </uix:VerifyExecutionOptions.Retry>
+                                                  <uix:VerifyExecutionOptions.Timeout>
+                                                    <InArgument x:TypeArguments="x:Double" />
+                                                  </uix:VerifyExecutionOptions.Timeout>
+                                                </uix:VerifyExecutionOptions>
+                                              </uix:NClick.VerifyOptions>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NClick>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ForEachRow.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                    </uix:NClick>
-                                  </Sequence>
-                                </ActivityAction>
-                              </ui:ForEachRow.Body>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ui:ForEachRow>
-                            <uix:NApplicationCard sap2010:Annotation.AnnotationText="Opening the browser again to display the success message and success rate" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Rpa Challenge" sap:VirtualizedContainerService.HintSize="450,1536.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="3b7be4a0-0faa-427d-8775-e07f2228db97" Version="V2">
-                              <uix:NApplicationCard.Body>
-                                <ActivityAction x:TypeArguments="x:Object">
-                                  <ActivityAction.Argument>
-                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                                  </ActivityAction.Argument>
-                                  <Sequence sap2010:Annotation.AnnotationText="Getting text to display in message box" DisplayName="Do : Getting text to display in message box" sap:VirtualizedContainerService.HintSize="416,1261.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                                    <Sequence.Variables>
-                                      <Variable x:TypeArguments="x:String" Name="FinalResult1" />
-                                      <Variable x:TypeArguments="x:String" Name="FinalResult2" />
-                                    </Sequence.Variables>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <uix:NGetAttributeGeneric x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Get Attribute 'Congratulations!'" Attribute="text" DisplayName="Get Attribute 'Congratulations!'" sap:VirtualizedContainerService.HintSize="354,274" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_4" Result="[FinalResult1]" ScopeIdentifier="3b7be4a0-0faa-427d-8775-e07f2228db97" Version="V3">
-                                      <uix:NGetAttributeGeneric.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="4bc64564-27cd-4aac-a8cc-76b931846b46" CvTextArea="779, 319, 304, 40" CvTextArgument="Congratulations!" CvType="Text" DesignTimeRectangle="415, 310, 1033, 54" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Congratulations!' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Congratulations!' tag='DIV' type='' class='message1 teal-text text-darken-2' check:innerText='Congratulations!' /&gt;" Guid="3d13d50d-dd4f-49ab-ae18-965e012d96cf" InformativeScreenshot="38f51bd87a474a91c9deed972a169466.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
-                                          <uix:TargetAnchorable.Anchors>
-                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                              <uix:Target DesignTimeRectangle="8, 210, 396, 721" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;div&amp;gt;app-rpa1&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DIV' class='instructions col s3 m3 l3 uiColorSecondary' aaname='' check:innerText='Instructions&amp;#xD;&amp;#xA;EN&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;1. The goal of this challenge is to create a workflow that will input data from a' /&gt;" Guid="ce2aa669-ce36-4c06-a288-a266f30bb62a" SearchSteps="Selector" />
-                                            </scg:List>
-                                          </uix:TargetAnchorable.Anchors>
-                                        </uix:TargetAnchorable>
-                                      </uix:NGetAttributeGeneric.Target>
+                                    </ui:ForEachRow>
+                                    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Opening the browser again to display the success message and success rate" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Rpa Challenge" sap:VirtualizedContainerService.HintSize="450,1509" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="3b7be4a0-0faa-427d-8775-e07f2228db97" Version="V2">
+                                      <uix:NApplicationCard.Body>
+                                        <ActivityAction x:TypeArguments="x:Object">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                          </ActivityAction.Argument>
+                                          <Sequence sap2010:Annotation.AnnotationText="Getting text to display in message box" DisplayName="Do : Getting text to display in message box" sap:VirtualizedContainerService.HintSize="416,1236" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="x:String" Name="FinalResult1" />
+                                              <Variable x:TypeArguments="x:String" Name="FinalResult2" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <uix:NGetAttributeGeneric x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Get Attribute 'Congratulations!'" Attribute="text" DisplayName="Get Attribute 'Congratulations!'" sap:VirtualizedContainerService.HintSize="354,270" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_4" Result="[FinalResult1]" ScopeIdentifier="3b7be4a0-0faa-427d-8775-e07f2228db97" Version="V3">
+                                              <uix:NGetAttributeGeneric.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="4bc64564-27cd-4aac-a8cc-76b931846b46" CvTextArea="779, 319, 304, 40" CvTextArgument="Congratulations!" CvType="Text" DesignTimeRectangle="415, 310, 1033, 54" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Congratulations!' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Congratulations!' tag='DIV' type='' class='message1 teal-text text-darken-2' check:innerText='Congratulations!' /&gt;" Guid="3d13d50d-dd4f-49ab-ae18-965e012d96cf" InformativeScreenshot="38f51bd87a474a91c9deed972a169466.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target DesignTimeRectangle="8, 210, 396, 721" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;div&amp;gt;app-rpa1&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DIV' class='instructions col s3 m3 l3 uiColorSecondary' aaname='' check:innerText='Instructions&amp;#xD;&amp;#xA;EN&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;1. The goal of this challenge is to create a workflow that will input data from a' /&gt;" Guid="ce2aa669-ce36-4c06-a288-a266f30bb62a" SearchSteps="Selector" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NGetAttributeGeneric.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NGetAttributeGeneric>
+                                            <ui:LogMessage sap2010:Annotation.AnnotationText="To check whether the variable contains the desired message" DisplayName="Log Message : To display FinalResult1" sap:VirtualizedContainerService.HintSize="354,217" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[FinalResult1]">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:LogMessage>
+                                            <uix:NGetAttributeGeneric x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Get Attribute 'Your success'" Attribute="text" DisplayName="Get Attribute 'Your success'" sap:VirtualizedContainerService.HintSize="354,270" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_5" Result="[FinalResult2]" ScopeIdentifier="3b7be4a0-0faa-427d-8775-e07f2228db97" Version="V3">
+                                              <uix:NGetAttributeGeneric.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="b6f9676e-dbe9-440f-a211-8ec81e3a0d54" CvTextArea="596, 369, 669, 19" CvTextArgument="Your success rate is 100% ( 70 out of 70 fields) in 54501 milliseconds" CvType="Text" DesignTimeRectangle="415, 364, 1033, 30" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Congratulations!' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl class='message2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='message2' tag='DIV' type='' aaname='Your success rate is 100% ( 70 out of 70 fields) in 54501 milliseconds' check:innerText='Your success rate is 100% ( 70 out of 70 fields) in 54501 milliseconds' /&gt;" Guid="478c3095-0905-4447-aab2-fa305b616f98" InformativeScreenshot="288adb379045311c14db516b4170d59a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                              </uix:NGetAttributeGeneric.Target>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NGetAttributeGeneric>
+                                            <ui:LogMessage sap2010:Annotation.AnnotationText="To check whether the variable contains the desired message" DisplayName="Log Message : To display FinalResult2" sap:VirtualizedContainerService.HintSize="354,217" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[FinalResult2]">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:LogMessage>
+                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Displaying the final results" AutoCloseAfter="00:00:00" DisplayName="Message Box :The final results" sap:VirtualizedContainerService.HintSize="354,141" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[FinalResult1+FinalResult2]">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:MessageBox>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </uix:NApplicationCard.Body>
+                                      <uix:NApplicationCard.TargetApp>
+                                        <uix:TargetApp Area="-8, -8, 1616, 876" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAScwAAEnMBjCK5BwAAAtRJREFUWEfllj9IalEcx83NHBShINucRAijLQiXttAgSHBwEIeGxFqqqaVNJyFIBQeJhghCRNFBBF20moIGBy1CMAgU+kNDKnLeO9ffPfce77npfdfHG94HfuD5/n7ne75e9V416B+jKsDd3R3SaDRc1Wo1UJWhKoBOpyMBFhcXQVWGqgDLy8skgMPhAFUZqgI8Pz9zh29vb4OiHFUBQqEQF0ANqnZbrVa0trYGqz9DcYBOp4MKhQK6vr7m3r3L5UKXl5eoVCqhr68vmJqciQLc3NygjY0N8oUbVx6PB9Xrddj9Mz8GaLVayGQyMQ/BpdVqmTpf+CP6/v4GNzayAWKxmMQwEAigarUKE1KKxSLyer2SfViXgxng9PSUMohEItCZnIODA8pDLoQkQKPRoDb2ej3oKKfZbI71kgQQ315HeXx8RKlUClZSkskkent7g9WQl5cX4reysgKqAHVKuVwmw+fn56AK8L1MJgOKwMnJCemPcnh4SHrtdhvUIdT05uamrAm+fHwvHo+DKhAMBmX3Yvje0dERKEOo6ZmZGW5ofX0dFIF+v09MEokEqAL7+/ukz8JsNnM9m80GyhBqmjcYTYnpdrukH41GQRXY3d0lfRZyV5esXl9fycDZ2RmoNHz//v4eFIGLiwuuZzQaQaHZ29sj+8WQ1e3tLRkIh8OgSvn8/IRXUvCbkMPn8xH/9/d3UEUBcrkcGVhYWAB1evDeuJ6enkAVBcjn89SQ0+mEjnqWlpYob2aAh4cHaogvv9/Phfv4+IDJ8eDfOr5hud1upudgMIBJUQAMa5hVer0ezc/Pc39Ecc3NzVF30HElhlptbW0xN0yzjo+P4bQhdJzfsDZNq/CVG0USAIMvKctATdntdnCnYQbApNNpZLFYmGZKCj8BK5UKuEqRDSDm6uoK7ezscGazs7PMg3AZDAa0urrKPRey2Szs/pmJAvxN/vcACP0CD7ydk7gYAkEAAAAASUVORK5CYII=" InformativeScreenshot="ea778723c3087cea8c9a57556bb5714c.jpg" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" Title="Rpa Challenge" Url="https://rpachallenge.com/" />
+                                      </uix:NApplicationCard.TargetApp>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                    </uix:NGetAttributeGeneric>
-                                    <ui:LogMessage sap2010:Annotation.AnnotationText="To check whether the variable contains the desired message" DisplayName="Log Message : To display FinalResult1" sap:VirtualizedContainerService.HintSize="354,224.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[FinalResult1]">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ui:LogMessage>
-                                    <uix:NGetAttributeGeneric x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Get Attribute 'Your success'" Attribute="text" DisplayName="Get Attribute 'Your success'" sap:VirtualizedContainerService.HintSize="354,274" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_5" Result="[FinalResult2]" ScopeIdentifier="3b7be4a0-0faa-427d-8775-e07f2228db97" Version="V3">
-                                      <uix:NGetAttributeGeneric.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="b6f9676e-dbe9-440f-a211-8ec81e3a0d54" CvTextArea="596, 369, 669, 19" CvTextArgument="Your success rate is 100% ( 70 out of 70 fields) in 54501 milliseconds" CvType="Text" DesignTimeRectangle="415, 364, 1033, 30" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Congratulations!' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl class='message2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='message2' tag='DIV' type='' aaname='Your success rate is 100% ( 70 out of 70 fields) in 54501 milliseconds' check:innerText='Your success rate is 100% ( 70 out of 70 fields) in 54501 milliseconds' /&gt;" Guid="478c3095-0905-4447-aab2-fa305b616f98" InformativeScreenshot="288adb379045311c14db516b4170d59a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
-                                      </uix:NGetAttributeGeneric.Target>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </uix:NGetAttributeGeneric>
-                                    <ui:LogMessage sap2010:Annotation.AnnotationText="To check whether the variable contains the desired message" DisplayName="Log Message : To display FinalResult2" sap:VirtualizedContainerService.HintSize="354,224.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[FinalResult2]">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ui:LogMessage>
-                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="Displaying the final results" AutoCloseAfter="00:00:00" DisplayName="Message Box :The final results" sap:VirtualizedContainerService.HintSize="354,142.66666666666666" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[FinalResult1+FinalResult2]">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ui:MessageBox>
+                                    </uix:NApplicationCard>
                                   </Sequence>
                                 </ActivityAction>
                               </uix:NApplicationCard.Body>
                               <uix:NApplicationCard.TargetApp>
-                                <uix:TargetApp Area="-8, -8, 1616, 876" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAScwAAEnMBjCK5BwAAAtRJREFUWEfllj9IalEcx83NHBShINucRAijLQiXttAgSHBwEIeGxFqqqaVNJyFIBQeJhghCRNFBBF20moIGBy1CMAgU+kNDKnLeO9ffPfce77npfdfHG94HfuD5/n7ne75e9V416B+jKsDd3R3SaDRc1Wo1UJWhKoBOpyMBFhcXQVWGqgDLy8skgMPhAFUZqgI8Pz9zh29vb4OiHFUBQqEQF0ANqnZbrVa0trYGqz9DcYBOp4MKhQK6vr7m3r3L5UKXl5eoVCqhr68vmJqciQLc3NygjY0N8oUbVx6PB9Xrddj9Mz8GaLVayGQyMQ/BpdVqmTpf+CP6/v4GNzayAWKxmMQwEAigarUKE1KKxSLyer2SfViXgxng9PSUMohEItCZnIODA8pDLoQkQKPRoDb2ej3oKKfZbI71kgQQ315HeXx8RKlUClZSkskkent7g9WQl5cX4reysgKqAHVKuVwmw+fn56AK8L1MJgOKwMnJCemPcnh4SHrtdhvUIdT05uamrAm+fHwvHo+DKhAMBmX3Yvje0dERKEOo6ZmZGW5ofX0dFIF+v09MEokEqAL7+/ukz8JsNnM9m80GyhBqmjcYTYnpdrukH41GQRXY3d0lfRZyV5esXl9fycDZ2RmoNHz//v4eFIGLiwuuZzQaQaHZ29sj+8WQ1e3tLRkIh8OgSvn8/IRXUvCbkMPn8xH/9/d3UEUBcrkcGVhYWAB1evDeuJ6enkAVBcjn89SQ0+mEjnqWlpYob2aAh4cHaogvv9/Phfv4+IDJ8eDfOr5hud1upudgMIBJUQAMa5hVer0ezc/Pc39Ecc3NzVF30HElhlptbW0xN0yzjo+P4bQhdJzfsDZNq/CVG0USAIMvKctATdntdnCnYQbApNNpZLFYmGZKCj8BK5UKuEqRDSDm6uoK7ezscGazs7PMg3AZDAa0urrKPRey2Szs/pmJAvxN/vcACP0CD7ydk7gYAkEAAAAASUVORK5CYII=" InformativeScreenshot="ea778723c3087cea8c9a57556bb5714c.jpg" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" Title="Rpa Challenge" Url="https://rpachallenge.com/" />
+                                <uix:TargetApp Area="-11, -11, 1942, 1042" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAScwAAEnMBjCK5BwAAAtRJREFUWEfllj9IalEcx83NHBShINucRAijLQiXttAgSHBwEIeGxFqqqaVNJyFIBQeJhghCRNFBBF20moIGBy1CMAgU+kNDKnLeO9ffPfce77npfdfHG94HfuD5/n7ne75e9V416B+jKsDd3R3SaDRc1Wo1UJWhKoBOpyMBFhcXQVWGqgDLy8skgMPhAFUZqgI8Pz9zh29vb4OiHFUBQqEQF0ANqnZbrVa0trYGqz9DcYBOp4MKhQK6vr7m3r3L5UKXl5eoVCqhr68vmJqciQLc3NygjY0N8oUbVx6PB9Xrddj9Mz8GaLVayGQyMQ/BpdVqmTpf+CP6/v4GNzayAWKxmMQwEAigarUKE1KKxSLyer2SfViXgxng9PSUMohEItCZnIODA8pDLoQkQKPRoDb2ej3oKKfZbI71kgQQ315HeXx8RKlUClZSkskkent7g9WQl5cX4reysgKqAHVKuVwmw+fn56AK8L1MJgOKwMnJCemPcnh4SHrtdhvUIdT05uamrAm+fHwvHo+DKhAMBmX3Yvje0dERKEOo6ZmZGW5ofX0dFIF+v09MEokEqAL7+/ukz8JsNnM9m80GyhBqmjcYTYnpdrukH41GQRXY3d0lfRZyV5esXl9fycDZ2RmoNHz//v4eFIGLiwuuZzQaQaHZ29sj+8WQ1e3tLRkIh8OgSvn8/IRXUvCbkMPn8xH/9/d3UEUBcrkcGVhYWAB1evDeuJ6enkAVBcjn89SQ0+mEjnqWlpYob2aAh4cHaogvv9/Phfv4+IDJ8eDfOr5hud1upudgMIBJUQAMa5hVer0ezc/Pc39Ecc3NzVF30HElhlptbW0xN0yzjo+P4bQhdJzfsDZNq/CVG0USAIMvKctATdntdnCnYQbApNNpZLFYmGZKCj8BK5UKuEqRDSDm6uoK7ezscGazs7PMg3AZDAa0urrKPRey2Szs/pmJAvxN/vcACP0CD7ydk7gYAkEAAAAASUVORK5CYII=" InformativeScreenshot="9148b49cb73f41bbfc43aa4322806f80.jpg" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" Title="Rpa Challenge" Url="https://rpachallenge.com/" />
                               </uix:NApplicationCard.TargetApp>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -455,39 +540,38 @@
                             </uix:NApplicationCard>
                           </Sequence>
                         </ActivityAction>
-                      </uix:NApplicationCard.Body>
-                      <uix:NApplicationCard.TargetApp>
-                        <uix:TargetApp Area="-11, -11, 1942, 1042" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAScwAAEnMBjCK5BwAAAtRJREFUWEfllj9IalEcx83NHBShINucRAijLQiXttAgSHBwEIeGxFqqqaVNJyFIBQeJhghCRNFBBF20moIGBy1CMAgU+kNDKnLeO9ffPfce77npfdfHG94HfuD5/n7ne75e9V416B+jKsDd3R3SaDRc1Wo1UJWhKoBOpyMBFhcXQVWGqgDLy8skgMPhAFUZqgI8Pz9zh29vb4OiHFUBQqEQF0ANqnZbrVa0trYGqz9DcYBOp4MKhQK6vr7m3r3L5UKXl5eoVCqhr68vmJqciQLc3NygjY0N8oUbVx6PB9Xrddj9Mz8GaLVayGQyMQ/BpdVqmTpf+CP6/v4GNzayAWKxmMQwEAigarUKE1KKxSLyer2SfViXgxng9PSUMohEItCZnIODA8pDLoQkQKPRoDb2ej3oKKfZbI71kgQQ315HeXx8RKlUClZSkskkent7g9WQl5cX4reysgKqAHVKuVwmw+fn56AK8L1MJgOKwMnJCemPcnh4SHrtdhvUIdT05uamrAm+fHwvHo+DKhAMBmX3Yvje0dERKEOo6ZmZGW5ofX0dFIF+v09MEokEqAL7+/ukz8JsNnM9m80GyhBqmjcYTYnpdrukH41GQRXY3d0lfRZyV5esXl9fycDZ2RmoNHz//v4eFIGLiwuuZzQaQaHZ29sj+8WQ1e3tLRkIh8OgSvn8/IRXUvCbkMPn8xH/9/d3UEUBcrkcGVhYWAB1evDeuJ6enkAVBcjn89SQ0+mEjnqWlpYob2aAh4cHaogvv9/Phfv4+IDJ8eDfOr5hud1upudgMIBJUQAMa5hVer0ezc/Pc39Ecc3NzVF30HElhlptbW0xN0yzjo+P4bQhdJzfsDZNq/CVG0USAIMvKctATdntdnCnYQbApNNpZLFYmGZKCj8BK5UKuEqRDSDm6uoK7ezscGazs7PMg3AZDAa0urrKPRey2Szs/pmJAvxN/vcACP0CD7ydk7gYAkEAAAAASUVORK5CYII=" InformativeScreenshot="9148b49cb73f41bbfc43aa4322806f80.jpg" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" Title="Rpa Challenge" Url="https://rpachallenge.com/" />
-                      </uix:NApplicationCard.TargetApp>
+                      </ueab:ExcelApplicationCard.Body>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                    </uix:NApplicationCard>
+                    </ueab:ExcelApplicationCard>
                   </Sequence>
                 </ActivityAction>
-              </ueab:ExcelApplicationCard.Body>
+              </ueab:ExcelProcessScopeX.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </ueab:ExcelApplicationCard>
+            </ueab:ExcelProcessScopeX>
           </Sequence>
         </ActivityAction>
-      </ueab:ExcelProcessScopeX.Body>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1616, 876" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="7b7db612600abfa7da06ba672e99ceca.jpg" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" Title="Excel" Url="https://rpachallenge.com/" />
+      </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </ueab:ExcelProcessScopeX>
-    <ui:LogMessage sap2010:Annotation.AnnotationText="Indicating process completed" DisplayName="Log Message :Indicating process completed" sap:VirtualizedContainerService.HintSize="738,198" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Process RPA challenge completed&quot;]">
+    </uix:NApplicationCard>
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Indicating process completed" DisplayName="Log Message :Indicating process completed" sap:VirtualizedContainerService.HintSize="834,195" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Process RPA challenge completed&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
